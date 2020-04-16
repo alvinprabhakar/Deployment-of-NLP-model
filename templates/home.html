@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>HOME PAGE</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename= 'css/styles.css') }}">
+  </head>
+  <body>
+
+  <header>
+    <div class="container">
+      <div id="brandname">Machine Learning Sentiment Analysis - Flask</div>
+
+    </div>
+    <h2>Twitter Sentiment Analysis - Negative/Positive</h2>
+  </header>
+
+  <div class="ml-container">
+    <form class="forms" action="{{ url_for('predict')}}" method="POST">
+        <p>Enter your message here</p>
+          <textarea name="message" rows="8" cols="80"> </textarea></br>
+
+        
+          <input type="submit" class="btn-info" name="pred" value="predict">
+    </form>
+
+  </div>
+</body>
+</html>
